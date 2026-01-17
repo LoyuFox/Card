@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.onload = function() {
+            var userAgent = navigator.userAgent.toLowerCase();
+            
+            // 检测微信
+            if (userAgent.indexOf('micromessenger') !== -1) {
+                window.location.href = 'https://www.baidu.com';
+            }
+            // 检测QQ
+            else if (userAgent.indexOf('qq/') !== -1) {
+                window.location.href = 'https://qm.qq.com/q/FqgIj5J24W';
+            }
+            // 其他浏览器
+            else {
+                window.location.href = 'https://www.google.com'; // 默认跳转
+            }
+        }
+    </script>
+</head>
+<body>
+    <p>正在跳转...</p >
+</body>
+</html>
